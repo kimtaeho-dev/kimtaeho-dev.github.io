@@ -28,20 +28,37 @@ li::marker{color:#6E6359}
 a{color:#EFE8DE;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#5A5048}a:hover{color:#D9A066;text-decoration-color:#D9A066}
 img{max-width:100%}
 @media print {
-  @page { margin: 14mm 12mm; }
+  @page { size: A4; margin: 12mm; }
   html, body, body > div { background: #FFFFFF !important; color: #111111 !important; }
   body * { color: #111111 !important; border-color: #CCCCCC !important; box-shadow: none !important; }
   body div[style*="background: #1D1915"], body span[style*="background: #2A241F"] { background: #FFFFFF !important; }
+  body span[style*="background: #2A241F"] { border: 1px solid #CCCCCC !important; }
   body div[style*="background: #4A4038"], body div[style*="background: #5C5046"], body div[style*="background: #6E6056"], body div[style*="background: #857566"] { background: #BBBBBB !important; }
   body div[style*="background: #D9A066"] { background: #111111 !important; }
   a { text-decoration: none !important; }
-  header { flex-wrap: nowrap !important; align-items: flex-start !important; }
-  header > img { flex: 0 0 140px !important; max-width: 140px !important; }
+  .no-print { display: none !important; }
+  body > div > div { padding: 0 !important; gap: 36px !important; max-width: none !important; }
+  header { flex-wrap: nowrap !important; align-items: flex-start !important; gap: 24px !important; }
+  header > img { flex: 0 0 120px !important; max-width: 120px !important; }
+  header > div { gap: 20px !important; }
+  h1 { font-size: 56px !important; }
+  section { gap: 20px !important; }
+  [style*="gap: 56px"], [style*="gap: 72px"] { gap: 24px !important; }
+  section > div[style*="padding-bottom: 24px"], h3[style*="padding-bottom: 20px"] { padding-bottom: 12px !important; }
+  article { padding-top: 20px !important; gap: 12px 28px !important; }
+  div[style*="gap: 40px"] { gap: 16px !important; }
+  div[style*="gap: 24px"] { gap: 12px !important; }
   div[style*="min-width: 760px"] { min-width: 0 !important; }
   div[style*="overflow-x: auto"] { overflow: visible !important; }
+  div[style*="border-radius: 8px"] { padding: 16px 18px !important; gap: 8px !important; }
+  div[style*="border-radius: 6px"] { padding: 14px !important; gap: 6px !important; }
+  div[style*="padding: clamp"] { padding: 18px !important; gap: 16px !important; }
+  span[style*="font-size: 36px"], p[style*="font-size: 40px"] { font-size: 26px !important; }
+  span[style*="font-size: 30px"] { font-size: 24px !important; }
+  h2[id] { font-size: 28px !important; }
+  h3[style*="font-size: 36px"] { font-size: 28px !important; }
   div[style*="border-radius: 8px"], div[style*="border-radius: 6px"], div[style*="padding-top: 16px"] { break-inside: avoid; }
   h3, h4 { break-after: avoid; }
-  body > div > div { padding-top: 0 !important; gap: 48px !important; }
 }
 </style>
 </head>
@@ -65,6 +82,7 @@ img{max-width:100%}
 <a href="mailto:kimtaeho001202@gmail.com">kimtaeho001202@gmail.com</a>
 <a href="tel:010-8312-9249">010-8312-9249</a>
 <a href="https://github.com/kimtaeho-dev">github.com/kimtaeho-dev</a>
+<a class="no-print" href="resume.pdf" download="김태호_이력서.pdf" style="color: #D9A066; text-decoration-color: #D9A066">PDF 다운로드</a>
 </div>
 </div>
 <img src="assets/profile.jpg" alt="김태호 프로필 사진" style="flex: 0 1 240px; width: 100%; max-width: 240px; aspect-ratio: 4 / 5; object-fit: cover; object-position: 55% 30%; border-radius: 4px; display: block">
